@@ -1,0 +1,20 @@
+- Food
+	- Population
+- Stone
+	- Basic factory
+	- Mine
+- Iron
+	- Tanks
+	- Advanced factory
+- Aluminum
+	- Jets
+	- Research facility
+- Uranium
+	- Nukes
+- Tech
+	- Spies
+	- Culture?
+	- Influence?
+- Land
+	- Each building takes 1 land
+	- Can be purchased by Resources. Cost increases based on how much land owned
