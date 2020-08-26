@@ -1,0 +1,161 @@
+GET http://localhost:5000/api/Resources
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"user_id":1,"type_id":3,"count":9001}
+
+<> 2020-08-25T105400.200.json
+
+###
+
+GET http://localhost:5000/api/Resources
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"user_id":1,"type_id":3,"count":9001}
+
+<> 2020-08-25T105330.500.txt
+
+###
+
+POST http://localhost:5000/api/Resources
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"user_id":1,"type_id":3,"count":9001}
+
+<> 2020-08-25T105304.201.json
+
+###
+
+POST http://localhost:5000/api/Resources
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"user_id":1,"type_id":2,"count":69}
+
+<> 2020-08-25T104924.201.json
+
+###
+
+POST http://localhost:5000/api/Resources
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+[{"user_id":1,"type_id":2,"count":69}]
+
+<> 2020-08-25T104912.400.json
+
+###
+
+POST http://localhost:5000/api/Resources
+Accept: */*
+Cache-Control: no-cache
+
+[{"user_id":1,"type_id":2,"count":69}]
+
+<> 2020-08-25T104832.415.json
+
+###
+
+GET http://localhost:5000/api/Resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-08-25T104718.200.json
+
+###
+
+GET http://localhost:5000/api/Resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-08-25T104410-3.200.json
+
+###
+
+GET http://localhost:5000/api/Resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-08-25T104410-2.200.json
+
+###
+
+GET http://localhost:5000/api/Resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-08-25T104410-1.200.json
+
+###
+
+GET http://localhost:5000/api/Resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-08-25T104410.200.json
+
+###
+
+GET http://localhost:5000/api/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-08-25T104403-3.200.json
+
+###
+
+GET http://localhost:5000/api/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-08-25T104403-2.200.json
+
+###
+
+GET http://localhost:5000/api/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-08-25T104403-1.200.json
+
+###
+
+GET http://localhost:5000/api/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-08-25T104403.200.json
+
+###
+
+GET http://localhost:5000/api/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-08-25T104401.200.json
+
+###
+
+GET http://localhost:5000/api/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-08-25T104351.200.json
+
+###
+
+GET http://localhost:5000/api/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-08-25T104228.500.txt
+
+###
+
