@@ -5,7 +5,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Wargame.Data;
+using Wargame.Models;
+using Wargame.Models.Units;
+using Wargame.Repositories.Data;
 
 namespace Wargame
 {
@@ -21,6 +23,8 @@ namespace Wargame
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IUnit, UnitFarm>();
+
 
             services.AddControllersWithViews();
 
@@ -58,15 +62,16 @@ namespace Wargame
                     pattern: "{controller}/{action=Index}/{id?}");
             });
 
-            app.UseSpa(spa =>
-            {
-                spa.Options.SourcePath = "ClientApp";
+            //TODO Re-enable
+            //app.UseSpa(spa =>
+            //{
+            //    spa.Options.SourcePath = "ClientApp";
 
-                if (env.IsDevelopment())
-                {
-                    spa.UseReactDevelopmentServer(npmScript: "start");
-                }
-            });
+            //    if (env.IsDevelopment())
+            //    {
+            //        spa.UseReactDevelopmentServer(npmScript: "start");
+            //    }
+            //});
         }
     }
 }

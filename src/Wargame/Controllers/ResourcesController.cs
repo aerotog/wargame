@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Wargame.Data;
-using Wargame.Dtos;
+using Wargame.Repositories.Data;
+using Wargame.Repositories.Entities;
 
 namespace Wargame.Controllers
 {
@@ -45,13 +43,22 @@ namespace Wargame.Controllers
         // PUT: api/resources/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutResources(int id, Resources resources)
+        [HttpPut("~/api/user/{userId}/resource/{typeId}")]
+        public async Task<IActionResult> PutResources(int userId, int typeId)
         {
             //if (id != resources.Id)
             //{
             //    return BadRequest();
             //}
+
+
+
+            var resources = new Resources
+            {
+                count = 100,
+                type_id = typeId,
+                user_id = userId
+            };
 
             _context.Entry(resources).State = EntityState.Modified;
 
@@ -61,7 +68,7 @@ namespace Wargame.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ResourcesExists(id))
+                if (!ResourcesExists(userId))
                 {
                     return NotFound();
                 }
@@ -77,9 +84,16 @@ namespace Wargame.Controllers
         // POST: api/resources
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost]
-        public async Task<ActionResult<Resources>> PostResources(Resources resources)
+        [HttpPost("~/api/user/{userId}/resource/{typeId}")]
+        public async Task<ActionResult<Resources>> PostResources(int userId, int typeId)
         {
+            var resources = new Resources
+            {
+                count = 100,
+                type_id = typeId,
+                user_id = userId
+            };
+
             _context.resources.Add(resources);
             await _context.SaveChangesAsync();
 

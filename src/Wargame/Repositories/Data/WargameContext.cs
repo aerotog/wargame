@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Wargame.Dtos;
+using Wargame.Repositories.Entities;
 
-namespace Wargame.Data
+namespace Wargame.Repositories.Data
 {
     public class WargameContext : DbContext
     {
@@ -11,14 +11,18 @@ namespace Wargame.Data
         }
 
         public DbSet<Resources> resources { get; set; }
+        public DbSet<Units> units { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseNpgsql("Host=127.0.0.1;Database=wargame;Username=postgres;Password=password");
+            => optionsBuilder.UseNpgsql("Host=127.0.0.1;Database=wargame;Username=postgres;Password=development");
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Resources>()
                 .HasKey(o => new { o.user_id, o.type_id});
+
+            modelBuilder.Entity<Units>()
+                .HasKey(o => new { o.user_id, o.type_id });
         }
     }
 }
